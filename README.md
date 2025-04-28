@@ -9,9 +9,3 @@
 ## Wireframe
 Lien vers Figma : [ToDo - WireFrame](https://www.figma.com/design/pcmslOL19sugOelkfRX1CY/ToDo---Wireframe?node-id=0-1&t=BGEnS7T0gho4IBCw-1)
 
-## Wiki
-### Lexique & glossaire
-
-
-### Ressources
-
