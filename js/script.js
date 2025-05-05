@@ -33,31 +33,45 @@ fetchJokes();
 
 
 //Menu dropdown
-const menu = document.createElement("div");
-const btnMenuDrop = document.getElementById("nav");
 const drop = document.getElementById("dropdown");
+const btnDrop = document.getElementById("btnDrop");
 
-function displayMenu() {
-  menu.innerHTML =
-    `<a href=#>Dropdown</a`
-  btnMenuDrop.appendChild(menu);
-}
-
-displayMenu();
-
-btnMenuDrop.addEventListener("click", function () {
-  drop.innerHTML =
-    `<a href="https://www.google.com/" target="_blank" alt="google.fr">Google</a>
-  <a href="https://www.google.com/" target="_blank" alt="google.fr">Google</a>
-  <a href="https://www.google.com/" target="_blank" alt="google.fr">Google</a>`
-
-  btnMenuDrop.appendChild(drop);
-});
+btnDrop.addEventListener("click", function () {
+  //si le display est différent de block modifier le css display par block
+  if (drop.style.display != "block") {
+    drop.style.display = "block"
+  }else{
+  //si le display est block modifier le css display par none
+    drop.style.display = "none"
+  };
+})
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 //Formulaire
 const form = document.getElementById("newForm");
 
@@ -94,4 +108,4 @@ cardJokes.innerHTML =
 
 console.log(myJokes.question);
 console.log(myJokes.answer);
-console.log(myJokes);
+console.log(myJokes);*/
