@@ -1,5 +1,3 @@
-
-
 //Feed blague
   //Permet de consommer l'API
 async function fetchJokes(nbreJokes) {
@@ -68,64 +66,3 @@ btnDrop.addEventListener("click", function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-//Formulaire
-const form = document.getElementById("newForm");
-
-form.innerHTML =
-  `<h3>Formulaire</h3>
-  <label name="question">Question</label>
-  <textarea type="text" id="question" name="question"></textarea>
-  <label name="answer">Answer</label>
-  <textarea type="text" id="answer" name="answer"></textarea>
-  <button type="submit">Envoyer le message</button>`
-
-
-
-
-
-//Faire une card où la réponse au formulaire est affichée
-
-const myDadJokes = document.createElement("div");
-const cardJokes = document.getElementById("mesJokes")
-
-
-const question = document.getElementById("question").value
-const answer = document.getElementById("answer").value
-
-const myJokes = {
-  question: question,
-  answer: answer
-};
-
-
-cardJokes.innerHTML =
-  `<p>${myJokes.question}</p>
-    <p>${myJokes.answer}</p>`
-
-console.log(myJokes.question);
-console.log(myJokes.answer);
-console.log(myJokes);*/

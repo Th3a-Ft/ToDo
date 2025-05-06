@@ -17,22 +17,36 @@
 <body>
     <header>
         <div id="nav">
-            <div id="dropdown">
-            </div>
+            <ul><a href="index.html">Accueil</a></ul>
+            <ul><a href="form.html">Formulaire</a></ul>
+            <ul id="btnDrop">Autres
+                <img src="img/arrow.png">
+                <!-- <p>Drop</p> -->
+                <div id="dropdown">
+                    <li><a href="jeux.html">Jeux</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                </div>
+            </ul>
+            
+
+
         </div>
 
-        <img src="img/logo.png">
+        <a href="index.html"><img src="img/logo.png"></a>
     </header>
 
 
-
     <main>
-        <section>
-<!--             <form id="newForm" action="https://httpbin.org/post" method="post"> -->
-                <form id="newForm"></form>
-
+        <section class="displayMyJokes">
+            <form id="newForm">
+                <h3>Formulaire</h3>
+                <label name="question">Question</label>
+                <textarea type="text" id="questionMyJokes" name="question"></textarea>
+                <label name="answer">Answer</label>
+                <textarea type="text" id="answerMyJokes" name="answer"></textarea>
+                <button type="submit">Envoyer le message</button>
             </form>
-            <div id="mesJokes"></div>
+            <div id="mesJokes" class="cardJokes"></div>
         </section>
     </main>
 
@@ -47,6 +61,7 @@
         <p>Footer</p>
         <img src="img/logo.png">
     </footer>
+    <script src="js/form.js"></script>
     <script src="js/script.js"></script>
 
 </body>
