@@ -14,3 +14,4 @@ btnDrop.addEventListener("click", function () {
 
 
 
+//Slider

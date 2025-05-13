@@ -74,7 +74,7 @@ formImg.addEventListener("submit", function (event) {
 
     //Ajout de la nvelle image dans la galerie
     divAddImg.innerHTML =
-        `<p class="removeImg">---</p>
+        `<button class="removeImg"><img src="img/removeImg.png"></button>
         <img src=${urlImg}>`
 
     galerieImg.appendChild(divAddImg);

@@ -177,6 +177,7 @@ header {
 
 #galerie div{
     margin: 1rem;
+    display: flex;
     
 }
 
@@ -200,4 +201,17 @@ header {
 /*Formulaire img*/
 #formImg{
     display: none;
+}
+
+#galerie div button{
+    height: 2rem;
+    width: 2rem;
+    background: none;
+    border: none;
+    margin-right: 0.5rem;
+}
+
+#galerie div button img{
+    height: 2rem;
+    width: 2rem;  
 }
