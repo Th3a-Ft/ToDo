@@ -1,57 +1,3 @@
-
-
-//Feed blague
-  //Permet de consommer l'API
-async function fetchJokes(nbreJokes) {
-  //Indique le nbre de fois recharger l'API et donc le nbre de fois afficher blaque
-  for (let i = 0; i < nbreJokes; i++) {
-    //Récupère les données de l'API
-    fetch("https://v2.jokeapi.dev/joke/Any?lang=fr")
-      //Then() execute fct une fois que promesse est résolue
-      //Transforme la réponse en json
-      .then(reponse => reponse.json())
-      //Affiche les données json de l'API
-      .then(function (json) {
-        //Execute la fct displayJokes avec comme paramètre la question (setup) et la réponse (delivery)
-        displayJokes(json.setup, json.delivery);
-      })
-
-  }
-}
-
-fetchJokes(3);
-
-function displayJokes(question, answer) {
-  //Affichage de l'API dans le html
-  //créer un élément div 
-  const dadJokes = document.createElement("div");
-  //on sélectionnne l'élement feed du HTML où sera affiché le feed
-  const cardFeed = document.getElementById("displayFeed");
-
-  //affiche les élements dans la section dadjokes dans le html
-  dadJokes.innerHTML =
-    `<p>${question}</p>
-        <p>${answer}</p>
-        <hr>`
-
-  //ajoute l'élément enfant dadJokes à l'élément parent cardFeed
-  cardFeed.appendChild(dadJokes);
-}
-
-//Btn reload blagues
-function reloadJokes() {
-  const btnReloadJokes = document.getElementById("reloadJokes");
-  const dadJokes = document.getElementById("displayFeed");
-  btnReloadJokes.addEventListener("click", function () {
-    dadJokes.innerHTML =
-      ``
-      fetchJokes(3);
-  }); 
-}
-
-reloadJokes();
-
-
 //Menu dropdown
 const drop = document.getElementById("dropdown");
 const btnDrop = document.getElementById("btnDrop");
@@ -68,64 +14,28 @@ btnDrop.addEventListener("click", function () {
 
 
 
+//Slider
+//Tableau où sont stockés les images
+const slides = ["img/ballon.jpg", "img/random.jpg","img/random2.jpg"];
+//Variable de l'index
+let currentIndex=0;
 
+//fonction pour afficher les images 
+function displaySlider(index) {
+  //récupère l'élément du HTML où afficher le slider
+  const sliderImg=document.getElementById("sliderImg")
+  //mise à jour de la source de l'image avec le chemin d'accès de l'image stocké ds le tableau
+  sliderImg.src=slides[index];
+}
 
+//fonction pour afficher la slide suivante
+function nextSlider(){
+  //incrémente la var currentIndex de 1 et vérifie que currentIndex est dans les limites du tableau
+  //ex si currentIndex=1 : (1+1) % 2 = 2 % 2 = 0 currentIndex devient = 0 car longueur du tableau est 2
+  currentIndex=(currentIndex+1)% slides.length;
+  displaySlider(currentIndex);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-//Formulaire
-const form = document.getElementById("newForm");
-
-form.innerHTML =
-  `<h3>Formulaire</h3>
-  <label name="question">Question</label>
-  <textarea type="text" id="question" name="question"></textarea>
-  <label name="answer">Answer</label>
-  <textarea type="text" id="answer" name="answer"></textarea>
-  <button type="submit">Envoyer le message</button>`
-
-
-
-
-
-//Faire une card où la réponse au formulaire est affichée
-
-const myDadJokes = document.createElement("div");
-const cardJokes = document.getElementById("mesJokes")
-
-
-const question = document.getElementById("question").value
-const answer = document.getElementById("answer").value
-
-const myJokes = {
-  question: question,
-  answer: answer
-};
-
-
-cardJokes.innerHTML =
-  `<p>${myJokes.question}</p>
-    <p>${myJokes.answer}</p>`
-
-console.log(myJokes.question);
-console.log(myJokes.answer);
-console.log(myJokes);*/
+displaySlider(currentIndex);
+//la fonction nextSLider est appelée toutes les 4sec
+setInterval("nextSlider()", 4000);

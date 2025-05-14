@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo site</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+        <div id="nav">
+            <ul><a href="index.html">Accueil</a></ul>
+            <ul><a href="form.html">Formulaire</a></ul>
+            <ul id="btnDrop">Autres
+                <img src="img/arrow.png">
+                <div id="dropdown">
+                    <li><a href="jeux.html">Jeux</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                </div>
+            </ul>
+
+
+
+        </div>
+
+        <a href="index.html"><img src="img/logo.png"></a>
+    </header>
+    <main>
+        <div id="slider">
+            <img id="sliderImg">
+        </div>
+
+
+        <div class="grpBtn">
+            <img id="mosaique" src="img/mosaique.png">
+            <img id="colonne" src="img/colonne.png">
+            <img id="openAddImg" src="img/addImg.png">
+        </div>
+        <div>
+            <form id="formImg">
+                <label name="urlImg">URL de l'image</label>
+                <input type="url" id="urlImg" name="urlImg"></input>
+                <button id="btnAddImg" type="submit">Envoyer le message</button>
+            </form>
+        </div>
+        <div id="galerie">
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+
+        <img src="img/logo.png">
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/galerie.js"></script>
+
+
+
+
+</body>
+
+</html>
